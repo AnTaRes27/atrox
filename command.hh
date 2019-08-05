@@ -38,6 +38,20 @@
                        processes the command
       Command(Atrox*, char, int): initializes a command with a
                                   valid command address and value
+
+      available commands;
+        G90 - ABSOLUTE POSITIONING
+        G91 - RELATIVE POSITIONING
+        G200 - ROTATE AXIS //NOT YET
+        G220 - ANGULAR UNIT: STEP
+        G220 - ANGULAR UNIT: DEGREE
+        G291 - JOG ROTATIONAL AXIS, ALWAYS RELATIVE
+        M0 - STOP //NOT YET
+        M1 - MANUAL STOP //NOT YET
+        M17 - ENABLE STEPPERS //NOT YET
+        M18 - DISABLE STEPPERS //NOT YET
+        M76 - PAUSE //NOT YET
+        M112 - EMERGENCY STOP //NOT YET
 */
 class Command{
   Atrox* atroxPtr;
