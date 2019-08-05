@@ -89,11 +89,34 @@ int Command::commandInit(char addr, int val){
           initDynamicsData();
           status = 2; //need PRY
           break;
-      } //end switch(cmdVal)
+      } //end switch(cmdVal) for G
+      break; //end G
+    case 'M':
+      switch(cmdVal){
+        case 0:
+          //M0 - STOP
+          status = 8; //complete
+          break;
+        case 1:
+          //M1 - MANUAL STOP
+          status = 8; //complete
+          break;
+        case 17:
+          //M17 - ENABLE STEPPERS
+          status = 8; //complete
+          break;
+        case 18:
+          //M18 - DISABLE STEPPERS
+          status = 8; //complete
+          break;
+        case 76:
+          //M76 - PAUSE
+          status = 8; //complete
+          break;
+      } //end switch(cmdVal) for M
+    default:
+      status = -1;
       break;
-      default:
-        status = -1;
-        break;
   } //end switch(cmdAddr)
   return status;
 } //end Command::commandInit(char, int)
@@ -175,12 +198,23 @@ void Command::execute(){
       switch(cmdVal){
         case 0:
           //M0 - STOP
+          //TODO
           break;
         case 1:
           //M1 - MANUAL STOP
+          //TODO
+          break;
+        case 17:
+          //M17 - ENABLE STEPPERS
+          atroxPtr->engageSteppers();
+          break;
+        case 18:
+          //M18 - DISABLE STEPPERS
+          atroxPtr->releaseSteppers();
           break;
         case 76:
           //M76 - PAUSE
+          //TODO
           break;
       } //end switch(cmdVal) for M
       break;

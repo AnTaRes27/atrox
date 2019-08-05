@@ -30,7 +30,7 @@ Atrox::Atrox(const int motorSet[6][6]){
   xMotor.speedStep = xMotor.maxSpeedStep = motorSet[0][4];
   xMotor.speedStep = xMotor.maxAccelStep = motorSet[0][5];
   xMotor.motorhw.setMaxSpeed(xMotor.maxSpeedStep);
-  xMotor.motofhw.setOutputPins(MOTOR_ENABLE_PIN);
+  xMotor.motorhw.setEnablePin(MOTOR_ENABLE_PIN);
 
   yMotor.stepPerRev = motorSet[1][0];
   yMotor.microstepFactor = motorSet[1][1];
@@ -39,7 +39,7 @@ Atrox::Atrox(const int motorSet[6][6]){
   yMotor.speedStep = yMotor.maxSpeedStep = motorSet[1][4];
   yMotor.speedStep = yMotor.maxAccelStep = motorSet[1][5];
   yMotor.motorhw.setMaxSpeed(yMotor.maxSpeedStep);
-  yMotor.motofhw.setOutputPins(MOTOR_ENABLE_PIN);
+  yMotor.motorhw.setEnablePin(MOTOR_ENABLE_PIN);
 
   zMotor.stepPerRev = motorSet[2][0];
   zMotor.microstepFactor = motorSet[2][1];
@@ -48,7 +48,7 @@ Atrox::Atrox(const int motorSet[6][6]){
   zMotor.speedStep = zMotor.maxSpeedStep = motorSet[2][4];
   zMotor.speedStep = zMotor.maxAccelStep = motorSet[2][5];
   zMotor.motorhw.setMaxSpeed(zMotor.maxSpeedStep);
-  zMotor.motofhw.setOutputPins(MOTOR_ENABLE_PIN);
+  zMotor.motorhw.setEnablePin(MOTOR_ENABLE_PIN);
 
   wMotor.stepPerRev = motorSet[3][0];
   wMotor.microstepFactor = motorSet[3][1];
@@ -57,7 +57,7 @@ Atrox::Atrox(const int motorSet[6][6]){
   wMotor.speedStep = wMotor.maxSpeedStep = motorSet[3][4];
   wMotor.speedStep = wMotor.maxAccelStep = motorSet[3][5];
   wMotor.motorhw.setMaxSpeed(wMotor.maxSpeedStep);
-  wMotor.motofhw.setOutputPins(MOTOR_ENABLE_PIN);
+  wMotor.motorhw.setEnablePin(MOTOR_ENABLE_PIN);
 
   pMotor.stepPerRev = motorSet[4][0];
   pMotor.microstepFactor = motorSet[4][1];
@@ -66,7 +66,7 @@ Atrox::Atrox(const int motorSet[6][6]){
   pMotor.speedStep = pMotor.maxSpeedStep = motorSet[5][4];
   pMotor.speedStep = pMotor.maxAccelStep = motorSet[5][5];
   pMotor.motorhw.setMaxSpeed(pMotor.maxSpeedStep);
-  pMotor.motofhw.setOutputPins(MOTOR_ENABLE_PIN);
+  pMotor.motorhw.setEnablePin(MOTOR_ENABLE_PIN);
 
   rMotor.stepPerRev = motorSet[5][0];
   rMotor.microstepFactor = motorSet[5][1];
@@ -75,7 +75,7 @@ Atrox::Atrox(const int motorSet[6][6]){
   rMotor.speedStep = rMotor.maxSpeedStep = motorSet[6][4];
   rMotor.speedStep = rMotor.maxAccelStep = motorSet[6][5];
   rMotor.motorhw.setMaxSpeed(rMotor.maxSpeedStep);
-  rMotor.motofhw.setOutputPins(MOTOR_ENABLE_PIN);
+  rMotor.motorhw.setEnablePin(MOTOR_ENABLE_PIN);
 
 }
 
